@@ -1,0 +1,51 @@
+.cursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.cursos li:nth-child(odd) {
+  background: var(--cor-4);
+  top: -90px;
+}
+
+.cursos li:nth-child(even) {
+  background: var(--cor-3);
+  top: -70px;
+}
+
+.cursos-item {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(4, auto);
+  padding: 20px 20px 20px 30px;
+  border: 1.5px solid var(--cor-1);
+  box-shadow: 5px 5px;
+  position: relative;
+  max-width: 220px;
+}
+
+.cursos-item a {
+  place-self: end;
+}
+
+@media (max-width: 768px) {
+  .cursos {
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-bottom: 30px;
+  }
+
+  .cursos-item {
+    position: static;
+    max-width: 320px
+  }
+
+  .cursos li:nth-child(even),
+  .cursos li:nth-child(odd) {
+    margin-top: 30px;
+    
+  }
+
+
+}

@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-border {
+  border-bottom: 1.5px solid var(--cor-1);
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+@media (max-width: 480px) {
+  .header {
+    justify-content: center;
+    gap: 10px;
+  }
+  .header-menu {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-menu {
+    gap: 10px;
+  }
+}
